@@ -1,7 +1,7 @@
 ---
 title: tensorflow一些函数
 date: 2019-09-18 00:21:52
-tags:
+tags: tensorflow
 ---
 #相关函数理解
 ##tf.constant
@@ -14,7 +14,7 @@ tags:
         name='Const',
         verify_shape=False
     )
-    
+
 **value 必选 常量数值或者list** 输出张量的值
 **dtype 可选 dtype** 输出张量元素类型
 **shape 可选 1维整形张量或者array** 输出张量的维度
@@ -131,7 +131,7 @@ shape 占位符维度
         data_format='NHWC',
         name=None
     )
-    
+
 **input 必选 tensor** 是一个四维的tensor，即[batch, in_height, in_width, in_channels]（若input是图像，[训练时一个batch的图片数量，图片高度，图片宽度，图像通道数]）
 
 
@@ -166,7 +166,7 @@ name=None
     
     cd /home/ubuntu;
     python conv2d.py
-
+    
     c shape:
     (1, 2, 2, 1)
     c value:
@@ -341,7 +341,7 @@ logits 和 targets 必须有相同的数据类型和数据维度。
     运算结果：
      [3.13261688e-01 1.26928011e-01 4.85873516e-02 4.01814993e+00
      5.00671535e+00 2.47568514e-03 7.00091147e+00]
-     
+
 关于交叉熵的理解，参考[交叉熵为何能做损失函数](https://blog.csdn.net/wenzishou/article/details/77618992)
 
 ----------

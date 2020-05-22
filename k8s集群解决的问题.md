@@ -33,7 +33,6 @@ Proxy 实现了Service的代理与软件模式的负载均衡器。
 
 ----------
 
-
 ----------
 
 
@@ -75,7 +74,7 @@ kubernetes中service是一种抽象的概念，它定义了一个pod的逻辑集
 pod是k8s的最小管理资源，一群pod被rc或者deployment高可用，pod里包含相关的一组容器（完整的提供一个服务），pod有一个pause的容器，其他容器是业务容器，共享pause容器的网络栈和volume挂载卷。如果该pod对内或者对外提供服务，则可以映射到一个service上。
 #volume
 容器内数据随着容器的生命周期而存在，如果需要持久化的保存数据，则需要挂载数据卷
- 
+
  14. emptyDir
  15. hostPath(local)
  16. NFS

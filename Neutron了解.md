@@ -1,7 +1,7 @@
 ---
 title: Neutron了解
 date: 2020-05-09 16:56:40
-tags: openstack sneutron
+tags: openstack neutron
 ---
 
 ## neutron创建网络过程

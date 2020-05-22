@@ -1,7 +1,7 @@
 ---
 title: Linux里export和source的作用：
 date: 2018-11-18 00:21:52
-tags:
+tags: linux
 ---
 
 export定义了之后变量变为系统变量，可以再本进程和子进程中调用，但是在脚本中定义了之后，在登录的shell进程中不能调用，因为登录的shell进程是该脚本的父进程
