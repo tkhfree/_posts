@@ -1,8 +1,24 @@
 ---
 title: 使用devstack（pike）安装openstack
 date: 2020-05-19 09:28:34
-tags: openstack
+tags: OpenStack
 ---
+
+
+
+[toc]
+
+
+
+# 环境和工具
+
+ubuntu16.04 + devstack（pike）
+
+
+
+
+
+
 
 - 更改apt/或者yum源
 

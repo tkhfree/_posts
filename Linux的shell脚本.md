@@ -53,7 +53,7 @@ grep -c ^head <file>
 $0 脚本本身的名称
 $1 脚本后跟的第一个参数
 $# 参数个数
-$？最后命令的推出状态
+$？最后命令的退出状态
 $* 所有参数
 $$ 脚本当成进程id号
 $@ 与$*作用一样
@@ -103,10 +103,7 @@ EOF
 << :标准输入来自命令行的一对分隔号的中间内容.
 
 ```shell
-tangkaifeideMacBook-Pro:Documents tang$ cat <<EOF >>test.sh 
-> echo "this is a cat&EOF demo"
-> echo "it can input n type"
-> EOF
+xxxxxxxxxx tangkaifeideMacBook-Pro:Documents tang$ cat <<EOF >>test.sh > echo "this is a cat&EOF demo" [bitbug_favicon.ico](../../../../Downloads/bitbug_favicon.ico) > echo "it can input n type"> EOFshell
 ```
 
 ### echo用法

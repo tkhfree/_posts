@@ -1,16 +1,8 @@
-k8s的部署
-k8s集群解决的问题
-k8s的节点类型
-master节点所用到的组件
-node节点所用到的组件
-命名空间
-resource quotas
-lable
-replication controller（RC）
-Deployment
-service
-volume
-网络通信场景
+---
+title: k8s安装
+date: 2018-11-18 00:21:52
+tags: Kubernetes
+---
 
 k8s集群解决的问题
 使用：

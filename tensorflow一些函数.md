@@ -1,10 +1,10 @@
 ---
 title: tensorflow一些函数
 date: 2019-09-18 00:21:52
-tags: tensorflow
+tags: Tensorflow
 ---
-#相关函数理解
-##tf.constant
+# 相关函数理解
+## tf.constant
 生成常量张量
 
     constant(
@@ -25,7 +25,7 @@ tags: tensorflow
 
 
 ----------
-##tf.placeholder
+## tf.placeholder
 占位符
 
     placeholder(
@@ -38,7 +38,7 @@ shape 占位符维度
 
 ----------
 
-##tf.nn.bias_add
+## tf.nn.bias_add
 将偏差项 bias 加到 value 上面，可以看做是 tf.add 的一个特例，其中 bias 必须是一维的，并且维度和 value 的最后一维相同，数据类型必须和 value 相同。
 
     bias_add(
@@ -98,7 +98,7 @@ shape 占位符维度
 
 ----------
 
-##tf.squared_difference
+## tf.squared_difference
 计算张量 x、y 对应元素差平方
 
     squared_difference(
@@ -109,7 +109,7 @@ shape 占位符维度
 
 ----------
 
-##tf.square
+## tf.square
 计算张量对应元素平方
 
     square(
@@ -119,8 +119,7 @@ shape 占位符维度
 
 ----------
 
-
-##tf.nn.conv2d 卷积核
+## tf.nn.conv2d 卷积核
 
     conv2d(
         input,
@@ -191,7 +190,7 @@ name=None
        [1.]]]]
 
 ----------
-##tf.nn.relu 激活函数
+## tf.nn.relu 激活函数
 
     relu(
         features,
@@ -213,8 +212,7 @@ name=None
 
 ----------
 
-
-##tf.nn.max_pool 池化层
+## tf.nn.max_pool 池化层
 
     max_pool(
         value,
@@ -278,7 +276,7 @@ name=None
        ksize与最后计算的尺寸没有关系，只是池化的范围
 
 ----------
-##tf.nn.dropout
+## tf.nn.dropout
 防止过拟合，对于神经网络单元，按照一定的概率将其暂时随机的从网络中丢弃。对于随机梯度下降来说，由于是随机丢弃，所以每一个mini-batch都在训练不同的网络。
 
     dropout(
@@ -309,8 +307,7 @@ name=None
 
 ----------
 
-
-##tf.nn.sigmoid_cross_entropy_with_logits 
+## tf.nn.sigmoid_cross_entropy_with_logits 
 这个函数的作用是计算经sigmoid 函数激活之后的交叉熵 /labels和logits之间的交叉熵（cross entropy）
 /先对 logits 通过 sigmoid 计算，再计算交叉熵
 
@@ -345,7 +342,7 @@ logits 和 targets 必须有相同的数据类型和数据维度。
 关于交叉熵的理解，参考[交叉熵为何能做损失函数](https://blog.csdn.net/wenzishou/article/details/77618992)
 
 ----------
-##tf.truncated_normal
+## tf.truncated_normal
 产生截断正态分布随机数，取值范围为 [ mean - 2 * stddev, mean + 2 * stddev ]
 
     truncated_normal(
@@ -371,8 +368,8 @@ logits 和 targets 必须有相同的数据类型和数据维度。
     产生一个取值范围 [ -2, 2 ] 的 3 * 3 矩阵
 
 ----------
-#相关类理解
-##tf.Variable
+# 相关类理解
+## tf.Variable
 维护图在执行过程中的状态信息，例如神经网络权重值的变化。
 
     __init__(

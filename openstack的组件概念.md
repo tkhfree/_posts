@@ -1,7 +1,7 @@
 ---
 title: openstack的组件概念
 date: 2018-09-18 00:21:52
-tags: openstack
+tags: OpenStack
 ---
 User：使用Openstack组件的客户端可以是人、服务、系统，任何的客户端来访问openstack组件，都需要有一个用户名。
 

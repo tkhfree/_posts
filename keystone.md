@@ -1,3 +1,9 @@
+---
+title: keystone
+date: 2018-11-18 00:21:52
+tags: OpenStack
+---
+
 keystone
 User：使用Openstack组件的客户端可以是人、服务、系统，任何的客户端来访问openstack组件，都需要有一个用户
 名。

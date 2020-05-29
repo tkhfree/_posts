@@ -1,7 +1,9 @@
 ---
 title: Neutron了解四
 date: 2020-05-12 16:05:32
-tags: openstack
+tags: 
+- Neutron 
+- OpenStack
 ---
 
 **vxlan** 和 **gre** 两种 overlay network

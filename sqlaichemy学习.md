@@ -1,30 +1,9 @@
-sqlaichemy学习
-数据库操作
-登录数据库
-创建数据库
-显示数据库
-删除数据库
-进入数据库
-sqlalchemy
-自增长
-类型
-非空
-默认值
-唯一
-指定字符集
-主键
-外键
-导入sqlalchemy包
-与数据库连接
-创建基类
-描述表结构
-创建实例（建立表）
-建立会话
-简单 CURD
-Create
-Retrieve
-update
-delete
+---
+title: sqlaichemy学习
+date: 2019-09-18 00:21:52
+tags: Python
+
+---
 
 数据库操作
 采用mysql数据库

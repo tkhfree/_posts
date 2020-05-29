@@ -1,7 +1,9 @@
 ---
-title: 网络虚拟化之Linux Bridge和
+title: 网络虚拟化之Linux Bridge和vlan
 date: 2020-05-09 20:05:32
-tags: openstack Neutron
+tags: 
+- OpenStack 
+- Neutron
 ---
 
 
@@ -230,7 +232,7 @@ PING www.a.shifen.com (180.97.33.107) 56(84) bytes of data.
 
 ------
 
-## VLAN	
+## VLAN
 
 LAN 表示 Local Area Network，本地局域网，通常使用 Hub 和 Switch 来连接 LAN 中的计算机。一般来说，两台计算机连入同一个 Hub 或者 Switch 时，它们就在同一个 LAN 中。
 

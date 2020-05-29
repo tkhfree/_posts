@@ -1,7 +1,7 @@
 ---
 title: Linux命令行操作
 date: 2017-11-18 00:21:52
-tags: linux
+tags: Linux
 ---
 
 ### 目录操作

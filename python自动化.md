@@ -1,7 +1,7 @@
 ---
 title: python脚本
 date: 2019-09-18 00:21:52
-tags: python
+tags: Python
 ---
 # 使用python自动化打开音乐下载网站自动下载音乐
 

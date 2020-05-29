@@ -1,7 +1,9 @@
 ---
 title: Neutron了解三
 date: 2020-05-12 15:19:39
-tags: openstack
+tags: 
+- Neutron 
+- OpenStack
 ---
 
 当租户网络连接到 Neutron router，通常将 router 作为默认网关。当 router 接收到 instance 的数据包，并将其转发到外网时:

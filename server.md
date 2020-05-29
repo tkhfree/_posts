@@ -1,7 +1,7 @@
 ---
 title: python WSGI框架
 date: 2018-11-18 00:21:52
-tags: python
+tags: Python
 ---
 [toc]
 #wsgi

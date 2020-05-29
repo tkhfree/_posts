@@ -1,7 +1,7 @@
 ---
 title: WSGI网关协议理解
 date: 2020-05-07 15:46:46
-tags: python
+tags: Python
 ---
 
 

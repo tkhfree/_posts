@@ -1,7 +1,7 @@
 ---
 title: git的使用
 date: 2018-10-08 00:21:52
-tags:
+tags: Git
 ---
 创建版本库
 

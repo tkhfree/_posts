@@ -1,7 +1,7 @@
 ---
 title: python与mysql连接的框架sqlalchemy
 date: 2018-11-18 00:21:52
-tags: python
+tags: Python
 ---
 #数据库操作 
 采用mysql数据库

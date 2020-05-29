@@ -1,3 +1,10 @@
+---
+title: python日志处理
+date: 2019-09-18 00:21:52
+tags: Python
+
+---
+
 Python之日志处理（logging模块）
 1.日志相关概念
 1.日志的作用
@@ -5,6 +12,7 @@ Python之日志处理（logging模块）
 3.日志字段信息与日志格式
 4.日志功能的实现
 二、logging模块简介
+
 1. logging模块的日志级别
 2. logging模块的使用方式介绍
 三、使用logging提供的模块级别的函数记录日志

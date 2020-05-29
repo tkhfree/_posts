@@ -1,10 +1,11 @@
 ---
 title: nginx搭建静态网站
 date: 2018-09-18 00:21:52
-tags: nginx
+tags: Nginx
 ---
 
 #安装nginx
+
 ```
 yum install nginx -y
 ```

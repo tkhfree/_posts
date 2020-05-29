@@ -1,7 +1,7 @@
 ---
 title: python概述
 date: 2018-11-18 00:21:52
-tags:
+tags: Python
 ---
 
  - python是一个解释型，交互式，无编译的面向对象语言 python缺点：
@@ -12,13 +12,12 @@ tags:
  - python中字符串用单引号'和双引号"都可以，但不可以混用
 
    
-  
+
 
  - python是一个动态语言，变量本身类型不固定
 
    
    
-
  - str是不变对象，而list是可变对象。对于可变对象，比如list，对list进行操作，list内部的内容是会变化的。元组(tuple)、数值型（number)、字符串(string)均为不可变对象,而字典型(dictionary)和列表型(list)的对象是可变对象
 
 ###list&tuple
@@ -31,16 +30,15 @@ python range()函数生成整数序列，list函数生成list，例如list(range
 
  - 定义函数时，需要确定函数名和参数个数；
    
-   
  - 如果有必要，可以先对参数的数据类型做检查；
 
    
-  
+
 
  - 函数体内部可以用return随时返回函数结果；
 
    
-  
+
 
  - 函数执行完毕也没有return语句时，自动return None。
 

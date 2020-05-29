@@ -1,15 +1,16 @@
 ---
 title: Linux里export和source的作用：
 date: 2018-11-18 00:21:52
-tags: linux
+tags: Linux
 ---
 
 export定义了之后变量变为系统变量，可以再本进程和子进程中调用，但是在脚本中定义了之后，在登录的shell进程中不能调用，因为登录的shell进程是该脚本的父进程
 source可以免除注销再登录的变量定义，例如在脚本中定义了变量，source该脚本，则在登录的shell进程中可以调用，相当于没有再执行子进程
-### 总结：export定义的变量可以在本进程和子进程中使用，不能在父进程中调用；source脚本是把脚本在登录shell中执行，没有开子进程
 
+**总结：export定义的变量可以在本进程和子进程中使用，不能在父进程中调用；source脚本是把脚本在登录shell中执行，没有开子进程**
 
-### linux的网络配置主要在/etc里
+**linux的网络配置主要在/etc里**
+
 /etc/sysconfig/network-scrips/ifcfg-en0
 设定网卡的参数，例如ip、子网掩码、路由器、IP获取方式等
 
