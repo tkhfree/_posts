@@ -7,10 +7,8 @@ tags: Kubernetes
 k8s集群解决的问题
 使用：
 先使用yaml文件（专门编写配置文件的一种格式）创建rc（定义标签，replicas数量，保存的容器模版等），自动会起按
-配置规定的pod，之后配置service文件（定义标签，端口等），并且起服务的时候，k8s会自动把ip地址写入linux的环
-境变量，并且自动在容器内部生成相关的环境变量。
-之所以将多个容器封在pod内，因为容器间通信很麻烦，pod相当与一个应用层的逻辑宿主机，pod内通信可以使用
-localhost。
+配置规定的pod，之后配置service文件（定义标签，端口等），并且起服务的时候，k8s会自动把ip地址写入linux的环境变量，并且自动在容器内部生成相关的环境变量。
+之所以将多个容器封在pod内，因为容器间通信很麻烦，pod相当与一个应用层的逻辑宿主机，pod内通信可以使用localhost。
 k8s中pod rc service node皆视为对象，label可以以key/value对形式附加上去。
 labels：
 key1:value1

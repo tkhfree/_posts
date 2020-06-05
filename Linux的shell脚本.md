@@ -200,7 +200,9 @@ tangkaifeideMacBook-Pro:Documents tang$
 command >/dev/null 2>&1
 ```
 
+### 输出变量
 
+```( set -o posix ; set ) | less```
 
 
 
