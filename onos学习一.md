@@ -1,10 +1,11 @@
 ---
 title: onos学习一
+date: 2020-06-16 10:46:01
 toc: true
-thumbnail: /public/image/1.png
+comments: true 
+thumbnail: https://pic.downk.cc/item/5ee896022cb53f50feba89df.png
 tags:
   - onos
-date: 2020-06-16 10:46:01
 ---
 
 一周没有总结了，上周划水好爽
@@ -114,3 +115,50 @@ Open vSwitch的一些概念：
 
 至于是否需要同时存在，个人以为openflow是必不可少的，毕竟是核心协议。至于netconf和ovsdb看具体的业务需要，就算是没有，无非是无法从controller层配置交换机，需要交换机本地配置。
 
+### OpenFlow协议
+
+安全通道（sw）有三种消息类型：Controller-to-Switch（控制器发起）、asynchronous（交换机发起）、symmetric（控制器或者交换机）
+
+OpenFlow的消息格式：OpenFlow Header（8字节）和OpenFlow Message
+
+![](https://pic.downk.cc/item/5ee990bd359fca8463e33bad.jpg)
+
+​												OpenFlow协议下的交换机与控制器交互流程
+
+### OF-CONFIG协议
+
+交换机与控制器进行通讯前，需要对其功能、特性以及资源进行配置。
+
+需要专门的配置协议进行配置，与OpenFlow是伴侣协议
+
+### NETCONFIG协议
+
+也是常用的南向接口之一
+
+## 控制平面
+
+一个或者多个SDN控制器
+
+SDN控制器体系架构：
+
+- [ ] 北向接口层
+- [ ] 内置应用层
+- [ ] 基础网络层                ——配置管理层
+- [ ] 抽象逻辑层
+- [ ] 南向接口层
+
+开源SDN控制器：python语言的Ryu、POX；java语言的ODL、ONOS
+
+## 北向接口
+
+例如Floodlight北向API：RESTful API
+
+- 流表OpenFlow
+
+- 防火墙
+
+- ACL
+
+- 多租户网络虚拟化
+
+  

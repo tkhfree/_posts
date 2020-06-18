@@ -1,5 +1,5 @@
 ---
-title: Linux里export和source的作用：
+title: Linux里export和source的作用
 date: 2018-11-18 00:21:52
 tags: Linux
 ---
