@@ -2,7 +2,7 @@
 title: ONOS+mininet实验
 toc: true
 comments: true
-thumbnail: 'https://pic.downk.cc/item/5eeb16d714195aa594714497.jpg'
+thumbnail: 'https://sc03.alicdn.com/kf/H1e0cc92efb194df982b6716e5896f6b1z.jpg'
 tags:
   - onos
 date: 2020-06-18 15:14:52
@@ -12,7 +12,7 @@ categories:
 
 根据onos官网的例子使用mininet构建简单的网络拓扑图进行试验
 
-![](https://pic.downk.cc/item/5eeb16d714195aa594714497.jpg)
+![](https://sc03.alicdn.com/kf/H1e0cc92efb194df982b6716e5896f6b1z.jpg)
 
 虽然使用mininet构建好了网络拓扑，但是h1 ping h2并不能成功，因为onos没有向交换机s1下发流表，也就是no flows installed on the data-plane。没有办法转发数据帧。
 
@@ -26,7 +26,7 @@ onos里有一个Reactive Forwarding应用程序，该app可以按需安装转发
 
 激活reactive forwarding/ 或者在gui启动
 
-### ONOS CLI命令
+## ONOS CLI命令
 
 #### 设备命令
 
@@ -99,3 +99,36 @@ tab是主机设备id
 ```mininet>link s2 s11 down```
 
 则onos intent会自动寻找可以建立链接的路径，如果没有则保持在failed状态
+
+删除intent使用
+
+`onos>remove-intent <tab-app> <tab-id>`
+
+Tab-app是应用id， tab-id是intent的id，自动补全
+
+[参考1](http://blog.chinaunix.net/uid-31410005-id-5825102.html)
+
+[参考2](https://www.kancloud.cn/kubee/onosguide/203183)
+
+### 下发流表实验
+
+#### mininet搭建拓扑网络
+
+```shell
+sudo mn --topo single,3 --mac --switch ovsk --controller remote，--ip=172.17.0.5 --port=6653
+```
+
+创建了三个实例主机和交换机以及一个控制器
+
+可以打开每个主机的终端
+
+```shell
+mininet>xterm h1 h2
+```
+
+这时候因为流表为空，所以目前ping不通，可以使用dpctl在VMssh终端中手动安装一些流表。
+
+```shell
+dpctl add-flow 
+```
+
