@@ -1,7 +1,7 @@
 ---
 title: SDN架构与实现
 toc: true
-thumbnail: 'https://pic.downk.cc/item/5eda03efc2a9a83be5241038.jpg'
+thumbnail: 
 comments: true
 tags:
   - SDN

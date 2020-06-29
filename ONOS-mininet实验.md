@@ -18,11 +18,11 @@ categories:
 
 onos里有一个Reactive Forwarding应用程序，该app可以按需安装转发flows，需要激活
 
-```onos>apps -a -s``` 
+`onos>apps -a -s` 
 
 显示处于活动状态的app
 
-```onos> app activate org.onosproject.fwd```
+`onos> app activate org.onosproject.fwd`
 
 激活reactive forwarding/ 或者在gui启动
 
@@ -30,25 +30,25 @@ onos里有一个Reactive Forwarding应用程序，该app可以按需安装转发
 
 #### 设备命令
 
-```onos>devices```
+`onos>devices`
 
 返回系统中已知的设备信息
 
 #### 链接命令
 
-```onos>links```
+`onos>links`
 
 列出onos里的链接
 
 #### 主机命令
 
-```onos>hosts```
+`onos>hosts`
 
 列出onos里的主机
 
 #### 流命令
 
-```onos>flows```
+`onos>flows`
 
 可以观察到在系统中注册的流，可以是以下几种状态：
 
@@ -59,7 +59,7 @@ onos里有一个Reactive Forwarding应用程序，该app可以按需安装转发
 
 #### 路径命令
 
-```onos>path <table>```
+`onos>path <table>`
 
 table都是交换机设备id，可以自动补全，路径命令可以直观的看到任何两个节点之间的最短路径
 
@@ -82,11 +82,11 @@ intent处于以下几个状态
 
 先关闭fwd
 
-```onos>app deactivate fwd```
+`onos>app deactivate fwd`
 
 加入我们的intent
 
-```onos>add-host-intent <tab> <tab>```
+`onos>add-host-intent <tab> <tab>`
 
 tab是主机设备id
 
@@ -96,7 +96,7 @@ tab是主机设备id
 
 如果断开一些交换机路径
 
-```mininet>link s2 s11 down```
+`mininet>link s2 s11 down`
 
 则onos intent会自动寻找可以建立链接的路径，如果没有则保持在failed状态
 
