@@ -185,3 +185,114 @@ tuple_test=(1,2,3,4,5)
 tup_test=tuple([1,2,3,4,5])
 
 **什么时候用元组？当希望把一个序列作为参数传递时，不希望被修改**
+
+## 字典
+
+与java中map对应，字典也是一个键值对结构
+
+dict_test={"aa": 1, "bb": 2 , 1:aa , 1.3:bb}
+
+取值
+
+dict_test["aa"]
+
+dict_test[2]
+
+dict_test[1.3]
+
+新添加键值对
+
+dict_test["test"]="helloworld"
+
+更新键值对
+
+dict_test["aa"]="python"
+
+## 集合
+
+集合和列表相似，但是集合不能存放相同的元素
+
+set_test=set([[1,2,3,4,5,1,2,3,4,5]])    -->[1,2,3,4,5]
+
+## 异常处理
+
+异常处理基本同java 类似，在try点创建一个标记，当遇到异常时匹配except，抛出异常，如果没有匹配的异常，则向上传递。
+
+```python
+try:
+  exec1
+  try:
+    exec2
+  fianlly:
+    exec3
+except ErrorType:
+  catch error
+```
+
+## 函数
+
+```pyhton
+def func(name, age, cls="", *arg, **karg):
+```
+
+函数用def定义，func是函数名，name，age是普通参数，必须按位置传入，cls是关键字参数或者默认参数，缺省可选，karg也是关键字参数，和cls关键字参数不一样的是，在函数中存在，但是不知道具体名称的关键字参数，arg是位置参数，同样是在函数中存在，但是不知道具体名称的位置参数。
+
+参数的位置一定是按照（位置参数，关键字参数，*参数，**参数）的顺序来写，其中位置参数如果设定就一定要传入，如果参数定义为：
+
+```python
+def func(*arg, **karg):
+  state
+```
+
+则表示函数可以传入任意类型和任意数量的参数
+
+传参形式是有多种多样的。
+
+```python
+def func(name, age=10):
+  print ("name is %s, age is %d" %(name,age))
+#调用方式
+func("hello")
+func("hello", 20)
+func(name="hello", age=20)
+func(age=20, name="hello")
+
+param_list=["hello",20]
+func(*param_list)
+
+param_dict={"name":"hello", "age":20}
+func(**param_dict)
+```
+
+## 生成器
+
+用open函数打开文件时，最好使用生成器模式。
+
+创建生成器的方式
+
+```python
+# 使用yield函数,每次执行都生成一个hello，获取它的值需要配合使用next函数或者迭代获取
+def first_generator():
+    yield "hello"
+
+result = first_generator()
+result.next()
+# 使用()获得生成器,当（）配合def使用是方法或者函数，当（）配合“,”使用是构造元组tumple，当和列表推导一起使用是生成器
+second_generator = (x for x in range(10))
+```
+
+可以使用生成器实现cat file | grep keyword这样的Linux命令
+
+```python
+#!/usr/bin/python
+
+with open("filepath","r+") as file_obj:
+  	for file in file_obj:
+      	if “keyword” in file.strip():
+          	print file
+        else:
+          	pass
+```
+
+
+
