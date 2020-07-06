@@ -1,7 +1,14 @@
 ---
 title: hadoop的介绍二-hdfs
 date: 2019-10-25 04:23:11
-tags: Hadoop
+tags: 
+- Hadoop
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 hdfs是大概工作流程是把一个大文件分割成若干个确定大小的数据块，每个数据库会进行备份分布在不同的主机上，当有某个数据块损坏时会自动从别的主机那里拷贝新的数据块。如果一个文件的大小小于这个设定的数据块，则按照一个数据块的空间进行存储。

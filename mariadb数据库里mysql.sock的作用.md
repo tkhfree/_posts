@@ -1,11 +1,19 @@
 ---
 title: mariadb数据库里mysql.sock的作用
 date: 2019-06-13 22:33:23
-tags: Linux
+tags: 
+- Linux
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 有时候在服务器上用mysql指令启动会报缺少mysql.sock的错误，一般有两种情况：
 +. 一种是把相关的依赖包全都安装上
+
 ```
 yum search mariadb
 yum install xxx xxx -y

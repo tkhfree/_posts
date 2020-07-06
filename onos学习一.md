@@ -5,7 +5,10 @@ toc: true
 comments: true 
 thumbnail: https://pic.downk.cc/item/5ee896022cb53f50feba89df.png
 tags:
-  - onos
+  - ONOS
+mathjax: true
+urlname:
+categories:
 ---
 
 一周没有总结了，上周划水好爽

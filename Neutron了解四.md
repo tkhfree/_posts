@@ -4,6 +4,12 @@ date: 2020-05-12 16:05:32
 tags: 
 - Neutron 
 - OpenStack
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 **vxlan** 和 **gre** 两种 overlay network

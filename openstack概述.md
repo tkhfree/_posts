@@ -1,8 +1,14 @@
 ---
 title: openstack概述
 date: 2018-11-18 00:21:52
-tags: OpenStack
+tags: 
+- OpenStack
+comments: true
 toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 [openstack概述](https://yq.aliyun.com/articles/494442)

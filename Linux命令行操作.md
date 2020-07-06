@@ -1,7 +1,14 @@
 ---
 title: Linux命令行操作
 date: 2017-11-18 00:21:52
-tags: Linux
+tags: 
+- Linux
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 ### 目录操作

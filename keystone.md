@@ -1,7 +1,14 @@
 ---
 title: keystone
 date: 2018-11-18 00:21:52
-tags: OpenStack
+tags: 
+- OpenStack
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 keystone

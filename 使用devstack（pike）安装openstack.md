@@ -1,7 +1,14 @@
 ---
 title: 使用devstack（pike）安装openstack
 date: 2020-05-19 09:28:34
-tags: OpenStack
+tags: 
+	- OpenStack
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 

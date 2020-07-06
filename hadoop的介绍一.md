@@ -1,7 +1,14 @@
 ---
 title: hadoop的介绍一
 date: 2019-10-25 03:42:21
-tags: Hadoop
+tags: 
+- Hadoop
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 apache社区里面的分布式存储和分布式计算的框架

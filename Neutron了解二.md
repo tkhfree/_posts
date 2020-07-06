@@ -4,6 +4,12 @@ date: 2020-05-12 09:40:21
 tags: 
 - Neutron 
 - OpenStack
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 Neutron的ML2 plugin包含**type driver** 和**mechanism driver**，type driver决定了建立的网络类型，包括local、flat、vlan、vxlan、gre；mechanism driver决定了实现的技术，例如使用Linux bridge和ovs等。一个抽象驱动，一个建模驱动。

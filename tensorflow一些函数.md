@@ -1,7 +1,14 @@
 ---
 title: tensorflow一些函数
 date: 2019-09-18 00:21:52
-tags: Tensorflow
+tags: 
+- Tensorflow
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 # 相关函数理解
 ## tf.constant

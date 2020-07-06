@@ -2,8 +2,14 @@
 title: 网络虚拟化之Linux Bridge和vlan
 date: 2020-05-09 20:05:32
 tags: 
-- OpenStack 
-- Neutron
+ - OpenStack 
+ - Neutron
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 

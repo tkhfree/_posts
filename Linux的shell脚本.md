@@ -1,7 +1,14 @@
 ---
 title: Linux的shell脚本
 date: 2020-05-22 11:15:37
-tags: Linux
+tags: 
+- Linux
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 [TOC]

@@ -1,7 +1,14 @@
 ---
 title: python概述
 date: 2018-11-18 00:21:52
-tags: Python
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
  - python是一个解释型，交互式，无编译的面向对象语言 python缺点：

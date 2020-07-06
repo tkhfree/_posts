@@ -1,7 +1,14 @@
 ---
 title: wsgi、uwsgi、uWSGI、nginx、apache
 date: 2020-06-01 10:36:29
-tags: Python
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 python web开发需要理解这几个概念

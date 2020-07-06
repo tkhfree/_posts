@@ -1,7 +1,14 @@
 ---
 title: python WSGI框架
 date: 2018-11-18 00:21:52
-tags: Python
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 [toc]
 #wsgi

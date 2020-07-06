@@ -1,11 +1,12 @@
 ---
 title: ONOS+mininet实验
-toc: true
-comments: true
 thumbnail: 'https://sc03.alicdn.com/kf/H1e0cc92efb194df982b6716e5896f6b1z.jpg'
 tags:
-  - onos
+  - ONOS
 date: 2020-06-18 15:14:52
+comments: true
+toc: true
+mathjax: true
 urlname:
 categories:
 ---

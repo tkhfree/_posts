@@ -1,7 +1,14 @@
 ---
 title: thrift了解
 date: 2020-05-25 22:39:51
-tags: Thrift
+tags: 
+- Thrift
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 # Thrift入门

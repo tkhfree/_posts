@@ -1,10 +1,17 @@
 ---
 title: python与mysql连接的框架sqlalchemy
 date: 2018-11-18 00:21:52
-tags: Python
+tags: - Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 #数据库操作 
 采用mysql数据库
+
 ## 登录数据库 ##
 
 ```

@@ -1,7 +1,14 @@
 ---
 title: python包管理
 date: 2020-05-14 11:50:42
-tags: Python
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 在安装Python包的过程中，经常涉及到distutils、setuptools、distribute、setup.py、easy_install、easy_install和pip等等。

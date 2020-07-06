@@ -1,8 +1,14 @@
 ---
 title: sqlaichemy学习
 date: 2019-09-18 00:21:52
-tags: Python
-
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 数据库操作

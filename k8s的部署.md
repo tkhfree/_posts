@@ -1,7 +1,14 @@
 ---
 title: k8s安装
 date: 2018-11-18 00:21:52
-tags: Kubernetes
+tags: 
+- Kubernetes
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 k8s集群解决的问题

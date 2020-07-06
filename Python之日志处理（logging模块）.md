@@ -1,8 +1,14 @@
 ---
 title: python日志处理
 date: 2019-09-18 00:21:52
-tags: Python
-
+tags: 
+- Python
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 Python之日志处理（logging模块）

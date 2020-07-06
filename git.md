@@ -1,7 +1,14 @@
 ---
 title: git的使用
 date: 2018-10-08 00:21:52
-tags: Git
+tags: 
+- Git
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 创建版本库
 

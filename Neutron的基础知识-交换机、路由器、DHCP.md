@@ -4,6 +4,12 @@ date: 2020-05-26 11:51:05
 tags: 
 - Neutron 
 - OpenStack
+comments: true
+toc: true
+mathjax: true
+urlname:
+categories:
+thumbnail:
 ---
 
 在使用neutron过程中，会用到创建虚拟网桥、虚拟交换机、虚拟路由器等，这些东西到底是什么？DHCP到底又什么用？
