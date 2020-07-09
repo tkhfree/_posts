@@ -1,5 +1,5 @@
 ---
-title: Python总结1
+title: Python总结一
 toc: true
 thumbnail: 
 comments: true
@@ -264,7 +264,37 @@ param_dict={"name":"hello", "age":20}
 func(**param_dict)
 ```
 
+## 迭代器
+
+迭代器iterator需要实现两个方法：
+
+1. \__iter__，返回迭代器自身
+2. \__next__，返回迭代器下一个元素
+
+```python
+class myiter(object):
+    def __init__(self, count):
+        self.count = count
+    
+    def __iter__(self):
+        return self
+    
+    def __next__(self):
+        if (0 >= count):
+            raise StopIteration()
+        else:
+            self.count -= 1
+            return self.count
+
+myiter it = myiter(4)
+while 1:
+    e = it.__next__()
+    print e
+```
+
 ## 生成器
+
+迭代器+协程
 
 用open函数打开文件时，最好使用生成器模式。
 
@@ -281,6 +311,10 @@ result.next()
 second_generator = (x for x in range(10))
 ```
 
+def定义的时一个普通函数，但是里面出现yield这个关键词，这就不是普通函数了，变成生成器了，有next这个成员函数（python3里变成\__next__），**生成器=迭代器+协程**
+
+yield两重魔力，第一重是迭代器有\_\_next\_\_函数，第二重当执行到yield时，相当于return object，但是没有并不完全一样，因为return会退出函数，而yield不会，相当于保存了运行的上下文，把函数挂起来。既然把函数挂起来，相当于该协程让出程序执行权，当\__next\_\_再次被调用，就从当前被挂起的上下文继续执行，这样可以一直循环下去，知道执行不到yield会抛出Raise StopIteration异常。
+
 可以使用生成器实现cat file | grep keyword这样的Linux命令
 
 ```python
@@ -293,6 +327,4 @@ with open("filepath","r+") as file_obj:
         else:
           	pass
 ```
-
-
 

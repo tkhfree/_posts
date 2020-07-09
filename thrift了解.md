@@ -1,8 +1,9 @@
 ---
-title: thrift了解
+title: thrift了解与AMQP
 date: 2020-05-25 22:39:51
 tags: 
 - Thrift
+- AMQP
 comments: true
 toc: true
 mathjax: true
@@ -19,7 +20,7 @@ thumbnail:
 
 简单来说,是Facebook公布的一款开源跨语言的RPC框架.
 
-与此类似的是rabbitMQ
+与此类似的是rabbitMQ，属于AMQP，进行RPC通信
 
 ##### 什么是RPC框架?
 
@@ -53,3 +54,43 @@ thrift是一种c/s的架构体系。在最上层是用户自行实现的业务�
 - 然后将此文件夹放到环境变量Path中。例如博主就是将D:Thrift添加到Path中
 - cmd，打开终端，输入`thrift -version`，即可看到相应的版本号，就算是成功安装啦
 
+# AMQP(Advanced message queuing protocol)
+
+RabbitMQ：服务端采用Erlang语言，客户端支持多种语言。j进行RPC通讯。
+
+AMQP基本概念：
+
+![](https://pic.downk.cc/item/5f0433f714195aa5947e67cb.png)
+
+## AMQP的消息转发
+
+AMQP server里有两个部件：
+
+- EXChange 接受Product发送的消息，按照一定的规则转发到响应的message Queues中
+- message queues再将消息转发到相应的consumers
+
+Product1产生的消息经过AMQP server转发到Consumer_n，起关键作用的路由标识是字符串Routing Key。
+
+每个Product生产消息时都会带上Routing key，而Consumer会告诉AMQP server它希望接受的消息Routing Key时什么。
+
+Message Queue匹配时有三种匹配方式
+
+- direct Exchanges 全值匹配
+- Topic Exchanges 通配符匹配，`*`代表一个字符串，`#`代表任意多个子字符串，product生产的字符串是用`.`隔开的子字符串
+- Fanout Exchanges 广播匹配，没有Routing key
+
+基于AMQP的以上三种消息转发模型，有三种通信模式：
+
+- RPC(远程过程调用)
+- 发布-订阅
+- 广播
+
+后两种基于通配符匹配和广播匹配就行了，主要讲一下RPC：
+
+RPC是一种C/S通信模型，当Client发送request时，C是Product，S是Consumer；
+
+当server回复response时，S是Product，C是Consumer。
+
+因此基于AMQP的RPC实现原理如下图：
+
+![](https://pic.downk.cc/item/5f043a0c14195aa59480f992.png)
