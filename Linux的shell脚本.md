@@ -110,7 +110,7 @@ EOF
 << :标准输入来自命令行的一对分隔号的中间内容.
 
 ```shell
-xxxxxxxxxx tangkaifeideMacBook-Pro:Documents tang$ cat <<EOF >>test.sh > echo "this is a cat&EOF demo" [bitbug_favicon.ico](../../../../Downloads/bitbug_favicon.ico) > echo "it can input n type"> EOFshell
+xxxxxxxxxx tangkaifeideMacBook-Pro:Documents tang$ cat <<EOF >>test.sh "this is a cat&EOF demo" EOF
 ```
 
 ### echo用法

@@ -313,7 +313,7 @@ second_generator = (x for x in range(10))
 
 def定义的时一个普通函数，但是里面出现yield这个关键词，这就不是普通函数了，变成生成器了，有next这个成员函数（python3里变成\__next__），**生成器=迭代器+协程**
 
-yield两重魔力，第一重是迭代器有\_\_next\_\_函数，第二重当执行到yield时，相当于return object，但是没有并不完全一样，因为return会退出函数，而yield不会，相当于保存了运行的上下文，把函数挂起来。既然把函数挂起来，相当于该协程让出程序执行权，当\__next\_\_再次被调用，就从当前被挂起的上下文继续执行，这样可以一直循环下去，知道执行不到yield会抛出Raise StopIteration异常。
+yield两重魔力，第一重是迭代器有\_\_next\_\_函数，第二重当执行到yield时，相当于return object，但是没有并不完全一样，因为return会退出函数，而yield不会，相当于保存了运行的上下文，把函数挂起来。既然把函数挂起来，相当于该协程让出程序执行权，当\__next\_\_再次被调用，就从当前被挂起的上下文继续执行，这样可以一直循环下去，直到执行不到yield会抛出Raise StopIteration异常。
 
 可以使用生成器实现cat file | grep keyword这样的Linux命令
 
