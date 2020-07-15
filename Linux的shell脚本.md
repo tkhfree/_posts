@@ -11,8 +11,6 @@ categories:
 thumbnail:
 ---
 
-[TOC]
-
 shell脚本的一些方法，想到什么命令就记什么命令了。
 
 ### set
