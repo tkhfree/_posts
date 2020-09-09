@@ -146,3 +146,37 @@ sudo ./pi_server
 4. bazel run onos-local -- clean 
 
 # 连接T4P4s
+
+启动pi_server
+sudo ./pi_server
+
+1 将P4Runtime_GRPCPP/onos目录下的t4p4s文件复制到 ~/onos/apps下
+
+2 vim ~/onos/tools/build/bazel/modules.bzl
+在//apps/p4-tutorial/mytunnel后一行加上
+"//apps/t4p4s/l2fwdgen:onos-apps-t4p4s-l2fedgen-oar":[],
+
+3 在~/onos下重新bazel build onos 
+
+4 bazel run onos-local -- clean 
+
+5 onos localhost  
+   app activate bmv2
+   app activate org.onosproject.t4p4s.l2fwdgen
+
+6 然后应加载netconf文件，以使该开关对于ONOS可见。
+onos-netcfg localhost <gitrepo>\onos\netcfg.json （netcfg.json文件在的地方）
+之后，ONOS连接到pi_server并将条目发送到dmac表
+
+7 将t4p4s_mod中的makefiles两个文件复制到~/t4p4s/makefiles下
+   将t4p4s_mod中src/hardware_indep/下controlplane.py.c复制到~/t4p4s/src/hardware_indep/下
+  更改178和211行为原来文件对应代码
+
+### 再次启动时
+
+1 只需要先启动dpdk系列操作
+2 启动pi_server
+3 启动onos
+4 onos里加载bmv2 t4p4s.l2fwdgen
+5 加载netcfg.json文件
+6 启动./t4p4s :l2fwd

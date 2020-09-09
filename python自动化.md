@@ -39,3 +39,4 @@ chrome_obj.close()
 ```
 
 其中使用两种寻找方式，find_element_by_id根据id查找，还是根据相对路径find_element_by_xpath；导入keys包，发送space按键；导入time包，停止100秒
+

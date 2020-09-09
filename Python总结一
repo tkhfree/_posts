@@ -328,3 +328,38 @@ with open("filepath","r+") as file_obj:
           	pass
 ```
 
+# argv和raw_input
+
+argv和raw_input都可以从命令行输入参数，不同点在于argv是从开始运行py文件时，就将输入以参数的形式在程序里使用；raw_input是在程序执行时，根据提示输入数据。
+
+# \_\_name\_\_ ==\_\_main\_\_
+
+\_\_name\_\_是内置变量，表示的是当前模块的名字。当前python文件是程序的主入口时，当前模块的\_\_name\_\_就是\_\_main\_\_，如果当前python文件不是程序的主入口，python是以模块import进来的，则\_\_name\_\_表示当前包的层次，是导入的文件名。
+
+python的\-m参数用于将一个模块或者包作为一个脚本运行，而\_\_main\_\_.py文件相当于是一个包的入口程序。
+
+`python xxx.py` 与 `python -m xxx.py` 的区别，一种是直接运行，一种是当做模块来运行。
+
+```python
+#!/user/bin/python
+#coding=utf-8
+#run.py
+import sys
+print __name__
+print sys.path
+```
+
+两种运行方式
+
+```shell
+python run.py
+__main__    #__name__的值
+['/yh1', '/usr/lib/python27.zip',...]
+
+
+python -m run.py
+run   #__name__的值
+['', '/usr/lib/python27.zip', ...]
+/usr/bin/python: No module named run.py
+```
+
