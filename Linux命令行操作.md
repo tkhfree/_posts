@@ -115,3 +115,57 @@ activate python2
 ----------
 
 ```
+
+### Linux离线安装apt包
+
+首先需要了解的是在网络正常情况下使用apt -d install 安装，会把包下载在*/var/cache/apt/archives/*下。
+
+因此整体思路就是在正常的安装，把下载的包和依赖包拷贝到离线机器上，构建包索引，执行安装
+
+如果正常机器上已经安装需要的包了，那么使用aptitude工具卸载安装的包
+
+（0）aptitude可以卸载包及依赖的包
+
+`sudo aptitude remove`
+
+（1）清理apt的下载缓存区。
+
+```html
+sudo rm -rf /var/cache/apt/archives/*
+```
+
+（2）下载所需要的组件
+
+```html
+sudo apt-get -d install <包名>
+```
+
+（3）创建一个目录，将下载的包拷贝到该目录下
+
+```html
+cp -r /var/cache/apt/archives  /yout-path
+```
+
+（4）修改目录权限
+
+```html
+ chmod 777 -R /your-path
+```
+
+（5） 建立deb包的依赖关系
+
+```html
+sudo touch /your-path/Packages.gz
+
+
+
+sudo dpkg-scanpackages /your-path/ /dev/null  | gzip > /your-path/Packages.gz
+```
+
+（6）将所有下载的文件和生成的gz文件拷贝到离线的ubuntu机器上，将 /etc/apt/sources.list原有内容注释掉，新增：
+
+```html
+deb file:/var debs/
+```
+
+（7）执行 sudo apt-get update，之后就可以直接使用apt-get install 包名 来安装了
