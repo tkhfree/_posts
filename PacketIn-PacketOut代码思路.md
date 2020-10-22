@@ -31,6 +31,8 @@ miss_send_len的默认值为128。未实施SET_CONFIG消息的交换时，使用
 | pad       | 8      | 用于调整对齐的填充                       |
 | data      | 任意   | 包含以太网帧的数据时使用的字段。         |
 
+控制器通过grpc与交换机进行交互，因此在使用proto生成runtime库之后，在server端
+
 ## Packet-out
 
 Packet-Out消息是从OpenFlow控制器向OpenFlow交换机发送的消息，是包含数据包发送命令的消息”。
