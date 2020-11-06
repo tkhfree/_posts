@@ -1,7 +1,7 @@
 ---
 title: 搭建P4RuntimeAPI
 toc: true
-thumbnail: 'https://pic.downk.cc/item/5eda03efc2a9a83be5241038.jpg'
+thumbnail: 'https://pic.downk.cc/item/5fa4f4081cd1bbb86b9e29b9.jpg'
 comments: true
 tags:
   - P4Runtime
@@ -9,6 +9,8 @@ date: 2020-08-31 19:34:08
 urlname:
 categories:
 ---
+
+![](https://pic.downk.cc/item/5fa4f4081cd1bbb86b9e29b9.jpg)
 
 # 依赖安装:dependency    
 
@@ -180,3 +182,4 @@ onos-netcfg localhost <gitrepo>\onos\netcfg.json （netcfg.json文件在的地�
 4 onos里加载bmv2 t4p4s.l2fwdgen
 5 加载netcfg.json文件
 6 启动./t4p4s :l2fwd
+
