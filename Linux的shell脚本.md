@@ -209,5 +209,14 @@ command >/dev/null 2>&1
 
 ```( set -o posix ; set ) | less```
 
+### 查看进程
+
+```shell
+ps -ef|grep syslog|grep -v "grep"
+
+pstree -p PID #查看进程树
+top -H -p PID #查看cpu利用率
+```
+
 
 

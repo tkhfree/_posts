@@ -31,7 +31,7 @@ miss_send_len的默认值为128。未实施SET_CONFIG消息的交换时，使用
 | pad       | 8      | 用于调整对齐的填充                       |
 | data      | 任意   | 包含以太网帧的数据时使用的字段。         |
 
-控制器通过grpc与交换机进行交互，因此在使用proto生成runtime库之后，在server端
+控制器通过grpc与交换机进行交互，因此在使用proto生成runtime库之后，在server端导入P4runtime库函数（p4runtime.pb.h、p4runtime.pb.cc、p4runtime.grpc.pb.h、p4runtime.grpc.pb.cc）后，启动监听ip和端口，注册proto文件中的rpc服务，等待stub的调用。
 
 ## Packet-out
 
