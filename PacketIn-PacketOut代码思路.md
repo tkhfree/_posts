@@ -10,6 +10,8 @@ urlname:
 categories:
 ---
 
+packet-in与packet-out是控制平面与数据平面进行流交互的工具，因为不同于下流表或者交互配置信息等方式，packet-in/out具有流形式和任意一端都可主动发起请求的特点，因此采用grpc的异步双向流交互进行通讯的工具。业务逻辑上如下：
+
 ## Packet-In
 
 使用Packet-In消息的目的是为了将到达OpenFlow交换机的数据包发送至OpenFlow控制器。以下2种情况即可发送Packet-In消息。
@@ -554,5 +556,30 @@ control ingress(inout headers_t hdr,
 }
 ```
 
-### recirculation、resubmit、clone的限制
+## 测试说明
 
+### 测试要求
+
+**Ø** ***\*测试集合2\****·
+
+1. 启动交换机，配置p4程序，default action默认为packet_in, 加载空流表；
+
+2. 打入IPv4数据包，在外部接口处可检测到对应的packet_in数据包；
+
+3. 打入Ipv6数据包，在外部接口处可检测到对应的packet_in数据包；
+
+4. 打入Geo数据包，在外部接口处可检测到对应的packet_in数据包；
+
+**Ø** ***\*测试集合\*******\*3\****
+
+1. 启动交换机，配置p4程序，default action默认为packet_in, 加载空流表；
+
+2. 控制器打入IPv4的packet_out消息，从对应的平台数据接口检测到输出的IPv4数据包；
+
+3. 控制器打入IPv6的packet_out消息，从对应的平台数据接口检测到输出的IPv6数据包；
+
+4. 控制器打入Geo的packet_out消息，从对应的平台数据接口检测到输出的Geo数据包；
+
+测试Packet-In的话，需要把handleRPC函数里的new StreamChannelImpl注释掉，因为这个创建的是server端读模式。
+
+测试packet-out，则需要把StreamChannelImpl类里的new_responder_created(true)改成new_responder_created(false)。

@@ -62,7 +62,7 @@ thrift是一种c/s的架构体系。在最上层是用户自行实现的业务�
 
 # AMQP(Advanced message queuing protocol)
 
-RabbitMQ：服务端采用Erlang语言，客户端支持多种语言。j进行RPC通讯。
+RabbitMQ：服务端采用Erlang语言，客户端支持多种语言。进行RPC通讯。
 
 AMQP基本概念：
 
