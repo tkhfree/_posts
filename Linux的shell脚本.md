@@ -202,13 +202,14 @@ tangkaifeideMacBook-Pro:Documents tang$
 ### 重定向到垃圾桶
 
 ```shell
-command >/dev/null 2>&1
+command >/dev/null 2>&1 #0标准输入 1标准输出 2错误输出
 ```
 
 ### 输出变量
 
 ```( set -o posix ; set ) | less```
 
+<<<<<<< Updated upstream
 ### 查看进程
 
 ```shell
@@ -217,6 +218,15 @@ ps -ef|grep syslog|grep -v "grep"
 pstree -p PID #查看进程树
 top -H -p PID #查看cpu利用率
 ```
+=======
+### inode
+
+硬链接`ln`和软链接`ln -s`的区别，硬链接时两个文件有相同的inode号，软链接时创建一个文件，这个文件的内容是打开另一个文件的inode，所以两个文件虽然最终都是打开一个inode，但是创建两个inode。
+
+[Linux的inode的理解](https://blog.csdn.net/xuz0917/article/details/79473562)
+
+
+>>>>>>> Stashed changes
 
 
 
