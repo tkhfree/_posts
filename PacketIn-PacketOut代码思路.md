@@ -10,7 +10,11 @@ urlname:
 categories:
 ---
 
-packet-in与packet-out是控制平面与数据平面进行流交互的工具，因为不同于下流表或者交互配置信息等方式，packet-in/out具有流形式和任意一端都可主动发起请求的特点，因此采用grpc的异步双向流交互进行通讯的工具。业务逻辑上如下：
+packet-in与packet-out是控制平面与数据平面进行流交互的工具，因为不同于下流表或者交互配置信息等方式，packet-in/out具有流形式和任意一端都可主动发起请求的特点，因此采用grpc的异步双向流交互进行通讯的工具。
+
+![](https://pic.downk.cc/item/5fd9571a3ffa7d37b3b5a980.gif)
+
+业务逻辑上如下：
 
 ## Packet-In
 
