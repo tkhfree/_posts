@@ -132,6 +132,12 @@ echo $(ls)
 标识符限定输入	命令<<标识符	命令把标准输入中读入内容，直到遇到“标识符”分解符为止
 输入输出重定向（同时使用）	命令< 文件1 >文件2	命令把文件1的内容作为标准输入，把文件2作为标准输出。
 
+还有一个进程替换<()
+
+```shell
+$ cat <(ls)    #把<(ls)当一个临时文件，文件内容是ls的结果，cat这个临时文件
+```
+
 ### 输出重定向
 
 - 0: 代表标准输入
@@ -223,6 +229,21 @@ top -H -p PID #查看cpu利用率
 硬链接`ln`和软链接`ln -s`的区别，硬链接时两个文件有相同的inode号，软链接时创建一个文件，这个文件的内容是打开另一个文件的inode，所以两个文件虽然最终都是打开一个inode，但是创建两个inode。
 
 [Linux的inode的理解](https://blog.csdn.net/xuz0917/article/details/79473562)
+
+利用${ } 还可针对不同的变数状态赋值(沒设定、空值、非空值)： 
+${file-my.file.txt} ：假如$file 沒有设定，則使用my.file.txt 作传回值。(空值及非空值時不作处理) 
+${file:-my.file.txt} ：假如$file 沒有設定或為空值，則使用my.file.txt 作傳回值。(非空值時不作处理)
+${file+my.file.txt} ：假如$file 設為空值或非空值，均使用my.file.txt 作傳回值。(沒設定時不作处理)
+${file:+my.file.txt} ：若$file 為非空值，則使用my.file.txt 作傳回值。(沒設定及空值時不作处理)
+${file=my.file.txt} ：若$file 沒設定，則使用my.file.txt 作傳回值，同時將$file 賦值為my.file.txt 。(空值及非空值時不作处理)
+${file:=my.file.txt} ：若$file 沒設定或為空值，則使用my.file.txt 作傳回值，同時將$file 賦值為my.file.txt 。(非空值時不作处理)
+${file?my.file.txt} ：若$file 沒設定，則將my.file.txt 輸出至STDERR。(空值及非空值時不作处理)
+
+${file:?my.file.txt} ：若$file 没设定或为空值，则将my.file.txt 输出至STDERR。(非空值時不作处理)
+
+${#var} 可计算出变量值的长度：
+
+${#file} 可得到27 ，因为/dir1/dir2/dir3/my.file.txt 是27个字节
 
 [一篇教会你写90%的shell脚本-zhihu](https://zhuanlan.zhihu.com/p/264346586)
 

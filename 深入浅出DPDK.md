@@ -151,4 +151,19 @@ struct lcore_conf lcore[RTE_MAX_LCORE] _rte_cache_aligned;//定义RTE_MAX_LCORE�
 
 一般网卡都有多队列，接收队列和发送队列都有多个，dpdk中的网卡为每个核都绑定单独的接收队列核发送队列，避免了竞争核cache一致性问题。
 
- 
+### DMA
+
+现代磁盘向内存中拷贝数据时无需借助cpu的帮助，由外接的I/O硬件或者主板进行操作，叫做DMA（Direct Memory Access）
+
+### 零拷贝
+
+直接把磁盘数据copy到了进程空间中，但实际上一般情况下I/O数据是要首先copy到操作系统内部，然后操作系统再copy到进程空间中。**Zero-copy**指无需从内核态向用户态进行拷贝报文，CPU直接在内核态对报文进行操作。
+
+## mbuf结构体
+
+![](https://img.imgdb.cn/item/600e71543ffa7d37b3e97eaf.jpg)
+
+![](https://img.imgdb.cn/item/600e71713ffa7d37b3e994ea.jpg)
+
+有一个知乎的帖子[[译] 写一个简单的内存分配器（替换glibc中的malloc函数）](https://zhuanlan.zhihu.com/p/80648748)讲解为什么设置这种结构体，很有借鉴意义。
+
