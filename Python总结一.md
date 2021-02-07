@@ -1,5 +1,5 @@
 ---
- ?title: Python总结一
+title: Python总结一
 toc: true
 thumbnail: 
 comments: true
