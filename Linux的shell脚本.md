@@ -230,6 +230,7 @@ top -H -p PID #查看cpu利用率
 
 [Linux的inode的理解](https://blog.csdn.net/xuz0917/article/details/79473562)
 
+```shell
 利用${ } 还可针对不同的变数状态赋值(沒设定、空值、非空值)： 
 ${file-my.file.txt} ：假如$file 沒有设定，則使用my.file.txt 作传回值。(空值及非空值時不作处理) 
 ${file:-my.file.txt} ：假如$file 沒有設定或為空值，則使用my.file.txt 作傳回值。(非空值時不作处理)
@@ -244,6 +245,7 @@ ${file:?my.file.txt} ：若$file 没设定或为空值，则将my.file.txt 输�
 ${#var} 可计算出变量值的长度：
 
 ${#file} 可得到27 ，因为/dir1/dir2/dir3/my.file.txt 是27个字节
+```
 
 [一篇教会你写90%的shell脚本-zhihu](https://zhuanlan.zhihu.com/p/264346586)
 
