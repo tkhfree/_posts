@@ -167,3 +167,5 @@ struct lcore_conf lcore[RTE_MAX_LCORE] _rte_cache_aligned;//定义RTE_MAX_LCORE�
 
 有一个知乎的帖子[[译] 写一个简单的内存分配器（替换glibc中的malloc函数）](https://zhuanlan.zhihu.com/p/80648748)讲解为什么设置这种结构体，很有借鉴意义。
 
+![](https://img.imgdb.cn/item/603c5ec35f4313ce25289bd7.png)
+
