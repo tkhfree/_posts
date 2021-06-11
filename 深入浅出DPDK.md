@@ -169,3 +169,26 @@ struct lcore_conf lcore[RTE_MAX_LCORE] _rte_cache_aligned;//定义RTE_MAX_LCORE�
 
 ![](https://img.imgdb.cn/item/603c5ec35f4313ce25289bd7.png)
 
+## dpdk抓包工具-pdump
+
+1、先设置环境变量RTE_SDK=/home/ndsc/t4p4s/dpdk-19.11/
+
+2、安装依赖libpcap的PMD驱动
+
+​		yum install -y libpcap.x86_64 libpcap-devel.x86_64
+
+3、修改 Target Env 的配置文件
+
+​		`$ vim dpdk-18.08/x86_64-native-linuxapp-gcc/.config CONFIG_RTE_LIBRTE_PMD_PCAP=y  CONFIG_RTE_LIBRTE_PDUMP=y  `
+
+4、安装pdump
+
+​		`cd dpdk-19.11/app/pdump`
+
+​		`make && make install`
+
+5、运行参数
+
+​		` ./build/app/dpdk-pdump -- --pdump 'port=0,queue=*,rx-dev=/tmp/capture.pcap'`
+
+![](https://pic.imgdb.cn/item/60b0474208f74bc1594367fe.jpg)

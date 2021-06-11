@@ -363,3 +363,27 @@ run   #__name__的值
 /usr/bin/python: No module named run.py
 ```
 
+## python的简洁if语句
+
+1. 普通写法
+
+```python
+a, b, c = 1, 2, 3
+if a > b :
+    c =a 
+else:
+    c = b 
+```
+
+2. 一行表达式，为真时放if前，也就是if前的表达式是if为true的值
+
+```python
+c = a if a > b else b;
+```
+
+3. 二维列表，利用大小判断的0，1当索引
+
+```python
+c = [b, a][a>b]
+```
+

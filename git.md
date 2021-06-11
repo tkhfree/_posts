@@ -61,13 +61,13 @@ git reset  --hard HEAD~1
 ![](http://localhost:9001/api/file/getImage?fileId=5b71273016454611ab000013)
 
 # 放弃工作区的修改
-讲工作区的修改撤销为“git commit”或者“git add”时候的状态
+将工作区的修改撤销为“git commit”或者“git add”时候的状态
 例如加入“I like men”
 
  - 未“git add”，则撤销后为原状态
  - 已“git add”，则撤销后为 I like men 状态
 
-```
+```shell
 git checkout -- httpserver.js
 ```
 --代表master支线
@@ -75,32 +75,32 @@ git checkout -- httpserver.js
 # 放弃暂存区修改
 已经“git add”加入暂存区了，只能用“git reset HEAD”去撤销修改
 
-```
+```shell
 git reset HEAD httpserver.js
 ```
 然后撤销工作区修改
 
-```
+```shell
 git checkout -- httpserver.js
 ```
 如果已经“git commit”，那么“返回上一个版本”
 
-```
+```shell
 git reset --hard HEAD~1
 ```
 # 删除工作区文件
 
-```
+```shell
 rm httpserver.js
 ```
 # 删除暂存区文件
 
-```
+```shell
 git rm httpserver.js
 ```
 # 删除master分支文件
 
-```
+```shell
 git rm httpserver.js
 git commit -m "delete it"
 ```
@@ -153,17 +153,17 @@ git checkout dev
 ```
 # 查看当前分支
 
-```
+```shell
 git branch
 ```
- #分支合并
+# 分支合并
 
-```
+```shell
 git merge dev
 ```
 # 删除分支
 
-```
+```shell
 git branch -d dev
 ```
 # bug分支
@@ -231,5 +231,4 @@ git push origin dev
 如果git pull提示no tracking information，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream-to <branch-name> origin/<branch-name>。
 
 ----------
-
 

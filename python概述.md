@@ -72,6 +72,6 @@ python range()函数生成整数序列，list函数生成list，例如list(range
     
     def f2(a, b, c=0, *, d, **kw):
         print('a =', a, 'b =', b, 'c =', c, 'd =', d, 'kw =', kw)
-###装饰器
+### 装饰器
 [详解Python的装饰器](https://www.cnblogs.com/cicaday/p/python-decorator.html)
 在代码运行期间动态增加功能的方式，称之为“装饰器”（Decorator），本质上，decorator就是一个返回函数的高阶函数
